@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" delimiter-precedes-et-al="never" et-al-min="4" et-al-use-first="3" name-as-sort-order="all" default-locale="en-US">
+  <info>
+    <title>SPE Journal (Society of Petroleum Engineers) 2023</title>
+    <title-short>SPEJ</title-short>
+    <id>https://github.com/cospeng/SPEJ2023</id>
+    <author>
+      <name>cospeng</name>
+    </author>
+    <category citation-format="author-date"/>
+    <summary>Custom CSL style based on the SPE Technical Publications Style Guide (2023 edition)</summary>
+    <updated>2025-10-24T07:16:10+00:00</updated>
+    <rights>This CSL style is an independent adaptation based on the SPE Technical Publications Style Guide (2023). © 2025 by cospeng. Licensed under CC BY-SA 4.0.</rights>
+  </info>
+  <citation delimiter-precedes-et-al="never" et-al-min="3" et-al-use-first="1" et-al-subsequent-min="3" et-al-subsequent-use-first="1" name-as-sort-order="all" disambiguate-add-names="true" disambiguate-add-year-suffix="true" collapse="year">
+    <sort>
+      <key variable="author" names-use-first="0" names-use-last="true"/>
+    </sort>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=" ">
+        <names variable="author">
+          <name form="short" and="text"/>
+          <et-al font-style="normal"/>
+        </names>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </group>
+    </layout>
+  </citation>
+  <bibliography name-delimiter=", " delimiter-precedes-et-al="never" et-al-min="4" et-al-use-first="3" et-al-subsequent-min="4" et-al-subsequent-use-first="3" initialize-with="." name-as-sort-order="all" second-field-align="flush" entry-spacing="0" hanging-indent="true">
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout>
+      <group>
+        <names variable="author">
+          <name and="text" delimiter=", " initialize-with=". " name-as-sort-order="all" sort-separator=", "/>
+          <et-al font-style="normal"/>
+        </names>
+        <date variable="issued" prefix=" " suffix=". ">
+          <date-part name="year"/>
+        </date>
+        <text variable="title" quotes="false" suffix=". "/>
+        <choose>
+          <if type="article-journal">
+            <group delimiter=" ">
+              <text variable="container-title" form="short" font-style="italic" suffix="."/>
+              <group>
+                <text variable="volume"/>
+                <group prefix=" (" suffix=")">
+                  <text variable="issue"/>
+                </group>
+                <text variable="page" prefix=": " suffix="."/>
+              </group>
+              <text variable="DOI" prefix=" https://doi.org/" suffix="."/>
+            </group>
+          </if>
+          <else-if type="paper-conference">
+            <group>
+              <text value="Presented at the" suffix=" "/>
+              <text variable="container-title" suffix=", "/>
+              <group>
+                <text variable="event-place" suffix=", "/>
+                <date variable="issued">
+                  <date-part name="day" suffix=" "/>
+                  <date-part name="month"/>
+                </date>
+              </group>
+              <text variable="DOI" prefix=". https://doi.org/"/>
+            </group>
+          </else-if>
+          <else-if type="book">
+            <group delimiter=", ">
+              <text variable="publisher-place"/>
+              <text variable="publisher"/>
+            </group>
+          </else-if>
+          <else-if type="report thesis standard">
+            <group delimiter=", ">
+              <text variable="genre"/>
+              <text variable="publisher"/>
+              <text variable="publisher-place"/>
+            </group>
+          </else-if>
+          <else-if type="webpage post post-weblog article-magazine article-newspaper">
+            <group delimiter=", ">
+              <text variable="container-title"/>
+              <date variable="issued">
+                <date-part name="year"/>
+              </date>
+              <text variable="URL"/>
+            </group>
+          </else-if>
+        </choose>
+      </group>
+    </layout>
+  </bibliography>
+</style>
