@@ -9,10 +9,10 @@
     </author>
     <category citation-format="author-date"/>
     <summary>Custom CSL style based on the SPE Technical Publications Style Guide (2023 edition)</summary>
-    <updated>2025-10-24T07:16:10+00:00</updated>
+    <updated>2025-10-30T02:41:11+00:00</updated>
     <rights>This CSL style is an independent adaptation based on the SPE Technical Publications Style Guide (2023). © 2025 by cospeng. Licensed under CC BY-SA 4.0.</rights>
   </info>
-  <citation delimiter-precedes-et-al="never" et-al-min="3" et-al-use-first="1" et-al-subsequent-min="3" et-al-subsequent-use-first="1" name-as-sort-order="all" disambiguate-add-names="true" disambiguate-add-year-suffix="true" collapse="year">
+  <citation delimiter-precedes-et-al="never" et-al-min="3" et-al-use-first="1" et-al-subsequent-min="3" et-al-subsequent-use-first="1" name-as-sort-order="all" disambiguate-add-year-suffix="true" collapse="year">
     <sort>
       <key variable="author" names-use-first="0" names-use-last="true"/>
     </sort>
